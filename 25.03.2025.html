@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktīva Viktorīna</title>
+
+   
+    <link rel="stylesheet" href="Index.html">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body style="background-color: rgb(206, 155, 195);">
+
+
+<h1 style="text-align: center; font-size:300%; color: rgb(0, 0, 0);">Viktorīna</h1>
+
+
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="Index.html">MĀJAS</a></li>
+            <ul>
+                <li><a href="#">Jūnijā</a></li>
+                <li><a href="#">Jūlijā</a></li>
+                <li><a href="#">Augustā</a>
+                    <ul>
+                        <li><a href="#">Atmiņas</a></li>
+                        <li><a href="#">Bildes</a></li>
+                        <ul>
+                            <li><a href="#">Ģimene</a></li>
+                            <li><a href="#">Draugi</a></li>
+                            <li><a href="#">Es</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Pārējie izvēlnes elementi -->
+            <li><a href="Jolka2.html">EGLĪTE</a></li>
+            <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+            <li><a href="05.11.2024.html">POGA</a></li>
+            <li><a href="SPĒLE.html">SPĒLE</a></li>
+            <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+            <li><a href="Kalkulators.html">KALKULATORS</a></li>
+            <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+            <li><a href="Atkārtojums.html">FORMAS</a></li>
+            <li><a href="Figma.html">SAZIŅA</a></li>
+            <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Otrs virsraksts (ieteicams izmantot tikai vienu <h1>) -->
+<h1>JavaScript Viktorīna</h1>
+
+<!-- 1. Jautājums: Itālija -->
+<p>Kā sauc Itālijas galvaspilsētu?</p>
+<input type="text" id="answer">
+<button onclick="CheckAnswer()">Pārbaudīt</button>
+<p id="feedback"></p>
+
+<!-- JavaScript funkcija, kas pārbauda atbildi uz pirmo jautājumu -->
+<script>
+function CheckAnswer() {
+    var answer = document.getElementById("answer").value; // Iegūst lietotāja ievadi
+    var feedback = document.getElementById("feedback");   // Atsauksmes paragrāfs
+    if (answer.toLowerCase() === "roma") {
+        feedback.innerHTML = "Pareizi!";
+    } else {
+        feedback.innerHTML = "Nepareizi, mēģini vēlreiz!";
+    }
+}
+</script>
+
+<!-- 2. Jautājums: Francija -->
+<p>Kā sauc Francijas galvaspilsētu?</p>
+<input type="text" id="answers">
+<button onclick="CheckAnswers()">Pārbaudīt</button>
+<p id="feedbacks"></p>
+
+<!-- JavaScript funkcija otrajam jautājumam -->
+<script>
+function CheckAnswers() {
+    var answer = document.getElementById("answers").value;
+    var feedback = document.getElementById("feedbacks");
+    if (answer.toLowerCase() === "parīze") {
+        feedback.innerHTML = "Pareizi!";
+    } else {
+        feedback.innerHTML = "Nepareizi, mēģini vēlreiz!";
+    }
+}
+</script>
+
+<!-- 3. Jautājums: Grieķija -->
+<p>Kā sauc Grieķijas galvaspilsētu?</p>
+<input type="text" id="answera">
+<button onclick="CheckAnswera()">Pārbaudīt</button>
+<p id="feedbacka"></p>
+
+<!-- JavaScript funkcija trešajam jautājumam -->
+<script>
+function CheckAnswera() {
+    var answer = document.getElementById("answera").value;
+    var feedback = document.getElementById("feedbacka");
+    if (answer.toLowerCase() === "atēnas") {
+        feedback.innerHTML = "Pareizi!";
+    } else {
+        feedback.innerHTML = "Nepareizi, mēģini vēlreiz!";
+    }
+}
+</script>
+
+<!-- 4. Jautājums: Horvātija -->
+<p>Kā sauc Horvātijas galvaspilsētu?</p>
+<input type="text" id="answeraas">
+<button onclick="CheckAnswerii()">Pārbaudīt</button>
+<p id="feedbackaii"></p>
+
+<!-- JavaScript funkcija ceturtajam jautājumam -->
+<script>
+function CheckAnswerii() {
+    var answer = document.getElementById("answeraas").value;
+    var feedback = document.getElementById("feedbackaii");
+    if (answer.toLowerCase() === "zagreba") {
+        feedback.innerHTML = "Pareizi!";
+    } else {
+        feedback.innerHTML = "Nepareizi, mēģini vēlreiz!";
+    }
+}
+</script>
+
+<!-- 5. Jautājums: Seišelu salas -->
+<p>Kā sauc Seišelu salu galvaspilsētu?</p>
+<input type="text" id="answeraass">
+<button onclick="CheckAnsweriii()">Pārbaudīt</button>
+<p id="feedbackaiii"></p>
+
+<!-- JavaScript funkcija piektajam jautājumam -->
+<script>
+function CheckAnsweriii() {
+    var answer = document.getElementById("answeraass").value;
+    var feedback = document.getElementById("feedbackaiii");
+    if (answer.toLowerCase() === "viktorija") {
+        feedback.innerHTML = "Pareizi!";
+    } else {
+        feedback.innerHTML = "Nepareizi, mēģini vēlreiz!";
+    }
+}
+</script>
+
+</body>
+</html>

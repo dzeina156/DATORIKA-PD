@@ -1,0 +1,117 @@
+
+<!DOCTYPE html> 
+<html lang="lv"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Uzmini Ciparu Spēle</title> 
+
+   
+    <script src="SPĒLE.js"></script>
+    <script src="Index.html"></script> <!-- Šī rinda ir kļūdaina – HTML fails nav skripts! To vajadzētu dzēst -->
+
+    <!-- CSS stila lapa -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      /* Šeit vari pievienot papildus stilus */
+    </style>
+</head>
+
+<body style="background-color: rgb(206, 155, 195);"> <!-- Rozā fona krāsa visai lapai -->
+
+<h1 style="text-align: center; font-size:300%; color: black;">Spēle</h1> <!-- Galvenais virsraksts -->
+
+<!-- Navigācijas izvēlne -->
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="Index.html">MĀJAS</a></li>
+            <!-- Apakšizvēlnes elementi par vasarām un mēnešiem -->
+            <ul>
+                <li><a href="#">Vasara 2024</a></li>
+                <li><a href="#">Vasara 2023</a></li>
+                <li><a href="#">Vasara 2022</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Jūnijā</a></li>
+                <li><a href="#">Jūlijā</a></li>
+                <li><a href="#">Augustā</a>
+                    <!-- Otrā līmeņa apakšizvēlne -->
+                    <ul>
+                        <li><a href="#">Atmiņas</a></li>
+                        <li><a href="#">Bildes</a></li>
+                        <!-- Trešā līmeņa izvēlne -->
+                        <ul>
+                            <li><a href="#">Ģimene</a></li>
+                            <li><a href="#">Draugi</a></li>
+                            <li><a href="#">Es</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Citas navigācijas saites -->
+            <li><a href="Jolka.html">EGLĪTE</a></li>
+            <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+            <li><a href="05.11.2024.html">POGA</a></li>
+            <li><a href="SPĒLE.html">SPĒLE</a></li>
+            <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+            <li><a href="Kalkulators.html">KALKULATORS</a></li>
+            <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+            <li><a href="Atkārtojums.html">FORMAS</a></li>
+            <li><a href="Figma.html">SAZIŅA</a></li>
+            <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Spēles saturs -->
+<div class="game-container">
+    <!-- Norāde lietotājam -->
+    <h1 style="color: blueviolet; font-size: 30px;">Uzmini ciparu, kuru esmu izvēlējies (no 1 līdz 30)</h1>
+
+    <!-- Ievades lauks lietotāja minējumam -->
+    <input type="number" id="guess" min="1" max="30"> <!-- Pieļaujamais ciparu intervāls -->
+
+    <!-- Poga minējuma pārbaudei -->
+    <button onclick="checkGuess()">Pārbaudīt</button>
+
+    <!-- Ziņojuma parādīšanas lauks -->
+    <div class="message" id="message"></div>
+</div>
+
+<!-- JavaScript funkcionalitāte -->
+<script>
+    // Nejauši izvēlēts skaitlis no 1 līdz 30
+    const secretNumber = Math.floor(Math.random() * 30) + 1;
+
+    // Skaitītājs, cik mēģinājumi veikti
+    let attempts = 0;
+
+    // Funkcija, kas tiek izsaukta, kad lietotājs nospiež pogu "Pārbaudīt"
+    function checkGuess() {
+        // Iegūst lietotāja ievadīto vērtību
+        const userGuess = document.getElementById('guess').value;
+
+        // Sagatavo vietu rezultāta ziņojumam
+        const messageDiv = document.getElementById('message');
+
+        // Palielina mēģinājumu skaitu
+        attempts++;
+
+        // Pārbauda, vai minējums ir pareizs
+        if (userGuess == secretNumber) {
+            messageDiv.textContent = `Apsveicu! Tu uzminēji pareizi! Izmēģinājumi: ${attempts}`;
+            messageDiv.style.color = 'green';
+        } else if (userGuess < secretNumber) {
+            messageDiv.textContent = `Par maz! Mēģini vēlreiz.`;
+            messageDiv.style.color = 'red';
+        } else if (userGuess > secretNumber) {
+            messageDiv.textContent = `Par daudz! Mēģini vēlreiz.`;
+            messageDiv.style.color = 'red';
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="lv"> <!-- Norāda, ka lapa ir latviešu valodā -->
+<head>
+    <meta charset="UTF-8"> <!-- Iestata simbolu kodējumu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Nodrošina responsīvo dizainu -->
+    <title>Akmens, šķēres, papīrītis</title> <!-- Lapas nosaukums -->
+
+    <link rel="stylesheet" href="style.css"> <!-- Ārējais stila fails -->
+    
+    
+    <style> 
+        .button {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .game-container {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 20px;
+            display: inline-block;
+            padding: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .choice:hover {
+            background-color: #fc00c5; /* Krāsa mainās, kad ar peli uzbrauc virs pogas */
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .score {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(206, 155, 195);"> <!-- Iestata fona krāsu -->
+<h1 style="text-align: center; font-size:300%; color: black;">Mini spēle</h1> <!-- Galvenais virsraksts -->
+
+<!-- Navigācijas izvēlne -->
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="Index.html">MĀJAS</a></li>
+            <!-- Papildu izvēlnes par vasaru -->
+            <ul>
+                <li><a href="#">Vasara 2024</a></li>
+                <li><a href="#">Vasara 2023</a></li>
+                <li><a href="#">Vasara 2022</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Jūnijā</a></li>
+                <li><a href="#">Jūlijā</a></li>
+                <li><a href="#">Augustā</a>
+                    <!-- Otrā un trešā līmeņa izvēlne -->
+                    <ul>
+                        <li><a href="#">Atmiņas</a></li>
+                        <li><a href="#">Bildes</a></li>
+                        <ul>
+                            <li><a href="#">Ģimene</a></li>
+                            <li><a href="#">Draugi</a></li>
+                            <li><a href="#">Es</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Citas sadaļas -->
+            <li><a href="Jolka2.html">EGLĪTE</a></li>
+            <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+            <li><a href="05.11.2024.html">POGA</a></li>
+            <li><a href="SPĒLE.html">SPĒLE</a></li>
+            <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+            <li><a href="Kalkulators.html">KALKULATORS</a></li>
+            <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+            <li><a href="Atkārtojums.html">FORMAS</a></li>
+            <li><a href="Figma.html">SAZIŅA</a></li>
+            <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Spēles virsraksts -->
+    <h1 style="color: rgb(255, 0, 128); font-size: 50px;">Akmens, šķēres, papīrītis</h1>
+
+    <!-- Izvēļu pogas spēlētājam -->
+    <div class="choices">
+        <button class="button" onclick="play('akmens')">Akmens</button>
+        <button class="button" onclick="play('šķēres')">Šķēres</button>
+        <button class="button" onclick="play('papīrītis')">Papīrītis</button>
+    </div>
+
+    <!-- Rezultāta parādīšanas laukums -->
+    <div class="result" id="result"></div>
+
+    <!-- JavaScript funkcionalitāte -->
+    <script>
+        function play(userChoice) {
+            const choices = ['akmens', 'šķēres', 'papīrītis']; // Pieejamās izvēles
+            const computerChoice = choices[Math.floor(Math.random() * 3)]; // Nejauša datora izvēle
+
+            let result = ''; // Mainīgais rezultāta tekstam
+
+            // Ja abas izvēles vienādas — neizšķirts
+            if (userChoice === computerChoice) {
+                result = 'Neizšķirts! Tu un dators izvēlējāties ' + userChoice;
+            } 
+            // Lietotājs uzvar
+            else if (
+                (userChoice === 'akmens' && computerChoice === 'šķēres') ||
+                (userChoice === 'šķēres' && computerChoice === 'papīrītis') ||
+                (userChoice === 'papīrītis' && computerChoice === 'akmens')
+            ) {
+                result = 'Tu uzvarēji! Tu izvēlējies ' + userChoice + ', bet dators izvēlējās ' + computerChoice;
+            } 
+            // Ja neviens no iepriekšējiem, tad uzvar dators
+            else {
+                result = 'Dators uzvarēja! Dators izvēlējās ' + computerChoice + ', bet tu izvēlējies ' + userChoice;
+            }
+
+            // Parāda rezultātu lapā
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>

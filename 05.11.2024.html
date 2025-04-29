@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Pievieno ārējo CSS stila failu -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Iekšējie CSS stili -->
+  <style>
+    /* Stils blokam myDIV */
+    #myDIV {
+      margin-left: 25px; /* Atstarpe no kreisās malas */
+      width: 300px;      /* Bloka platums */
+      height: 300px;     /* Bloka augstums */
+      background-color: rgb(188, 93, 207); /* Fona krāsa */
+      color: rgb(119, 66, 206); /* Teksta krāsa */
+    }
+
+    /* Klase visam bloku konteinerim - lai bloki stāvētu vienā rindā */
+    .test {
+      display: flex;     /* Flex izkārtojums – bloki vienā rindā */
+      position: relative;
+    }
+
+    /* Stils blokam myBLOCK */
+    #myBLOCK {
+      margin-left: 25px;
+      width: 300px;
+      height: 300px;
+      background-color: rgb(188, 93, 207);
+      color: rgb(119, 66, 206);
+    }
+
+    /* Stils blokam myCOLOR */
+    #myCOLOR {
+      margin-left: 25px;
+      width: 300px;
+      height: 300px;
+      background-color: rgb(188, 93, 207);
+      color: rgb(119, 66, 206);
+    }
+  </style>
+</head>
+
+<!-- Lapas ķermenis ar gaiši rozā fona krāsu -->
+<body style="background-color: rgb(206, 155, 195);">
+
+<!-- Lapas galvenais virsraksts -->
+<h1 style="text-align: center; font-size: 300%;">Pogas</h1>
+
+<!-- Konteiners navigācijas izvēlnei un saturam -->
+<div id="container">
+
+  <!-- Navigācijas izvēlne ar saitēm uz citām lapas sadaļām -->
+  <nav>
+    <ul>
+      <li><a href="Index.html">MĀJAS</a></li>
+
+      <!-- Ligzdotas izvēlnes (jāuzlabo struktūra vēlāk) -->
+      <ul>
+        <li><a href="#">Jūnijā</a></li>
+        <li><a href="#">Jūlijā</a></li>
+        <li><a href="#">Augustā</a>
+          <!-- Otrā līmeņa izvēlne -->
+          <ul>
+            <li><a href="#">Atmiņas</a></li>
+            <li><a href="#">Bildes</a></li>
+
+            <!-- Trešā līmeņa izvēlne -->
+            <ul>
+              <li><a href="#">Ģimene</a></li>
+              <li><a href="#">Draugi</a></li>
+              <li><a href="#">Es</a></li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Papildu izvēlnes vienumi -->
+      <li><a href="Jolka2.html">EGLĪTE</a></li>
+      <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+      <li><a href="05.11.2024.html">POGA</a></li>
+      <li><a href="SPĒLE.html">SPĒLE</a></li>
+      <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+      <li><a href="Kalkulators.html">KALKULATORS</a></li>
+      <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+      <li><a href="Atkārtojums.html">FORMAS</a></li>
+      <li><a href="Figma.html">SAZIŅA</a></li>
+      <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+    </ul>
+  </nav>
+
+  <!-- Trīs bloki ar pogām, kas maina to fona krāsu -->
+  <div class="test">
+    
+    <!-- Pirmais bloks ar pogu -->
+    <div id="myDIV">
+      <!-- Kad tiek noklikšķināta poga, izsauc funkciju "myFunction" -->
+      <button onclick="myFunction()">Try it</button>
+    </div>
+
+    <!-- Otrais bloks ar pogu -->
+    <div id="myBLOCK">
+      <!-- Poga izsauc funkciju "myblock" -->
+      <button onclick="myblock()">Try it</button>
+    </div>
+
+    <!-- Trešais bloks ar pogu -->
+    <div id="myCOLOR">
+      <!-- Poga izsauc funkciju "mycolor" -->
+      <button onclick="mycolor()">Try it</button>
+    </div>
+  </div> <!-- beidzas .test -->
+
+</div> <!-- beidzas #container -->
+
+<!-- JavaScript funkcijas, kas maina fona krāsu katram blokam -->
+<script>
+  function myFunction() {
+    // Maina myDIV bloka krāsu uz gaiši zilu
+    document.getElementById("myDIV").style.backgroundColor = "Lightblue";
+  }
+
+  function myblock() {
+    // Maina myBLOCK bloka krāsu uz rozā
+    document.getElementById("myBLOCK").style.backgroundColor = "Pink";
+  }
+
+  function mycolor() {
+    // Maina myCOLOR bloka krāsu uz violetu
+    document.getElementById("myCOLOR").style.backgroundColor = "Purple";
+  }
+</script>
+
+</body>
+</html>

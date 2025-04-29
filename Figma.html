@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Document</title>
+
+ 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    
+    <link rel="stylesheet" href="Atkārtojums.css">
+
+    
+    <link rel="stylesheet" href="Index.html"> 
+
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="w3-purple">
+
+<!-- Lapas virsraksts -->
+<h1 style="text-align: center; font-size:300%; color: black;">Sazinaties ar mums!</h1>
+
+<!-- Navigācijas izvēlnes ietvars -->
+<div id="container">
+    <nav>
+        <ul>
+            <!-- Galvenā izvēlne -->
+            <li><a href="Index.html">MĀJAS</a></li>
+
+            <!-- Zemizvēlne: vasaras gadi -->
+            <ul>
+                <li><a href="#">Vasara 2024</a></li>
+                <li><a href="#">Vasara 2023</a></li>
+                <li><a href="#">Vasara 2022</a></li>
+            </ul>        
+
+            <!-- Zemizvēlne: mēneši un dziļāki līmeņi -->
+            <ul>
+                <li><a href="#">Jūnijā</a></li>
+                <li><a href="#">Jūlijā</a></li>
+                <li><a href="#">Augustā</a>
+                    <ul>
+                        <li><a href="#">Atmiņas</a></li>
+                        <li><a href="#">Bildes</a></li>
+                        <ul>
+                            <li><a href="#">Ģimene</a></li>
+                            <li><a href="#">Draugi</a></li>
+                            <li><a href="#">Es</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Pārējās izvēlnes saites -->
+            <li><a href="Jolka2.html">EGLĪTE</a></li>
+            <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+            <li><a href="05.11.2024.html">POGA</a></li>
+            <li><a href="SPĒLE.html">SPĒLE</a></li>
+            <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+            <li><a href="Kalkulators.html">KALKULATORS</a></li>
+            <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+            <li><a href="Atkārtojums.html">FORMAS</a></li>
+            <li><a href="Figma.html">SAZIŅA</a></li>
+            <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Satura bloks ar virsrakstu un pamatekstu -->
+<div>
+    <div>
+        <h1 class="w3-text-indigo">Lūdzu, sazinieties ar mums!</h1>
+        <h2>Ja jums ir kādi jautājumi, rakstiet mums uz e-pastu vai izmantojiet mūsu saziņas veidlapu.</h2>
+    </div>
+
+    <!-- Veidlapa ar W3.CSS pozicionēšanas un krāsu klasēm -->
+    <div class="w3-display-bottommiddle w3-pink">
+        <form>
+            <!-- Lauks: vārds -->
+            <label for="vards">Vārds:</label><br>
+            <input type="text" id="vards" name="vards" placeholder="Lūdzu ieraksti savu vārdu"><br>
+
+            <!-- Lauks: e-pasts -->
+            <label for="e-pasts">E-pasts:</label><br>
+            <input type="text" id="e-pasts" name="E-pasts" placeholder="Lūdzu ieraksti derīgu e-pasta adresi"><br>
+
+            <!-- Lauks: telefona numurs -->
+            <label for="telefons">Telefona numurs:</label><br>
+            <input type="text" id="telefons" name="Telefons" placeholder="Lūdzu ieraksti telefona numuru"><br>
+
+            <!-- Lauks: adrese -->
+            <label for="adrese">Adrese:</label><br>
+            <input type="text" id="adrese" name="Adrese" placeholder="Lūdzu ieraksti savu adresi"><br>
+
+            <!-- Lauks: ziņojums -->
+            <label for="zinojums">Ziņojums:</label><br>
+            <textarea name="zinojums" rows="10" cols="30" placeholder="Ierakstiet savu jautājumu"></textarea><br>
+
+            <!-- Poga: nosūtīt -->
+            <input type="submit" value="Nosūtīt">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

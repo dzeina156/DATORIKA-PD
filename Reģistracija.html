@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> <!-- Iestata rakstzīmju kodējumu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsīvs dizains -->
+    <title>Document</title> <!-- Lapas nosaukums cilnē -->
+    <!-- Pievieno ārējās stila lapas -->
+    <link rel="stylesheet" href="registracija.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: rgb(206, 155, 195);"> <!-- Lapas fona krāsa -->
+
+<h1 style="text-align: center; font-size:  300%;">Jauns konts</h1> <!-- Virsraksts centrā -->
+
+<!-- Navigācijas izvēlne -->
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="Index.html">MĀJAS</a></li>
+            <!-- Apakšizvēlne par vasarām -->
+            <ul>
+                <li><a href="#">Vasara 2024</a></li>
+                <li><a href="#">Vasara 2023</a></li>
+                <li><a href="#">Vasara 2022</a></li>
+            </ul>
+        </li>
+
+        <!-- Apakšizvēlne par mēnešiem -->
+        <ul>
+            <li><a href="#">Jūnijā</a></li>
+            <li><a href="#">Jūlijā</a></li>
+            <li><a href="#">Augustā</a>
+                <!-- Otrā līmeņa izvēlne -->
+                <ul>
+                    <li><a href="#">Atmiņas</a></li>
+                    <li><a href="#">Bildes</a></li>
+                    <!-- Trešā līmeņa izvēlne -->
+                    <ul>
+                        <li><a href="#">Ģimene</a></li>
+                        <li><a href="#">Draugi</a></li>
+                        <li><a href="#">Es</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+        <!-- Galvenās izvēlnes saites -->
+        <li><a href="Jolka.html">EGLĪTE</a></li>
+        <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+        <li><a href="05.11.2024.html">POGA</a></li>
+        <li><a href="SPĒLE.html">SPĒLE</a></li>
+        <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+        <li><a href="Kalkulators.html">KALKULATORS</a></li>
+        <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+        <li><a href="Atkārtojums.html">FORMAS</a></li>
+        <li><a href="Figma.html">SAZIŅA</a></li>
+        <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+        </ul>
+    </nav>
+</div> 
+
+<!-- Reģistrācijas forma -->
+<form action="action_page.php"> <!-- Norāda, uz kuru lapu tiks nosūtīti dati -->
+    <div class="container">
+        <h1>Reģistrēties</h1> <!-- Virsraksts -->
+        <p>Aizpildiet prasīto</p>
+        <hr>
+
+        <!-- Ievades lauks e-pastam -->
+        <label for="email"><b>Epasts</b></label>
+        <input type="text" placeholder="Ievadiet Epastu" name="email" id="email" required>
+
+        <!-- Ievades lauks parolei -->
+        <label for="psw"><b>Parole</b></label>
+        <input type="password" placeholder="Ievadiet paroli" name="psw" id="psw" required>
+
+        <!-- Paroles atkārtota ievade -->
+        <label for="psw-repeat"><b>Atkārtoti ievadiet paroli</b></label>
+        <input type="password" placeholder="Atkārtoti ievadiet paroli" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+
+        <!-- Paziņojums par noteikumiem -->
+        <p>Reģistrējoties jūs piekrītat mūsu <a href="#">Noteikumiem un Konfidencialitātei</a>.</p>
+
+        <!-- Poga formas iesniegšanai -->
+        <button type="submit" class="registerbtn">Reģistrēties</button>
+    </div>
+
+    <!-- Saites, ja jau ir konts -->
+    <div class="container signin">
+        <p>Vai jums jau ir konts? <a href="#">Ieiet</a>.</p>
+    </div>
+</form>
+
+</body>
+</html>

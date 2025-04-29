@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Darāmo Lietu Saraksts</title>
+
+  
+  <link rel="stylesheet" href="Index.html">
+
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Iestata visam tekstam Arial fontu un fona krāsu */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a85493;
+    }
+
+    /* Virsrakstu krāsa */
+    h1 {
+      color: #333;
+    }
+
+    /* Teksta ievades lauka dizains */
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<!-- Lapas saturs sākas -->
+<body>
+  
+<!-- Lapas virsraksts -->
+<h1 style="text-align: center; font-size: 300%;">Darāmo darbu saraksts</h1>
+
+<!-- Navigācijas izvēlne -->
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="Index.html">MĀJAS</a></li>
+
+            <!-- Pirmā līmeņa izvēlne -->
+            <ul>
+                <li><a href="#">Vasara 2024</a></li>
+                <li><a href="#">Vasara 2023</a></li>
+                <li><a href="#">Vasara 2022</a></li>
+            </ul>        
+
+            <!-- Otrā līmeņa izvēlne -->
+            <ul>
+                <li><a href="#">Jūnijā</a></li>
+                <li><a href="#">Jūlijā</a></li>
+                <li><a href="#">Augustā</a>
+
+                <!-- Trešais līmenis: zem "Augustā" -->
+                <ul>
+                    <li><a href="#">Atmiņas</a></li>
+                    <li><a href="#">Bildes</a></li>
+
+                    <!-- Ceturtais līmenis: zem "Bildes" -->
+                    <ul>
+                        <li><a href="#">Ģimene</a></li>
+                        <li><a href="#">Draugi</a></li>
+                        <li><a href="#">Es</a></li>
+                    </ul>
+                </ul>
+                </li>
+            </ul>
+
+            <!-- Pārējās izvēlnes pogas -->
+            <li><a href="Jolka.html">EGLĪTE</a></li>
+            <li><a href="Reģistracija.html">JAUNS KONTS</a></li>
+            <li><a href="05.11.2024.html">POGA</a></li>
+            <li><a href="SPĒLE.html">SPĒLE</a></li>
+            <li><a href="SPĒLE2.html">MINI SPĒLE</a></li>
+            <li><a href="Kalkulators.html">KALKULATORS</a></li>
+            <li><a href="25.03.2025.html">VIKTORĪNA</a></li>
+            <li><a href="Atkārtojums.html">FORMAS</a></li>
+            <li><a href="Figma.html">SAZIŅA</a></li>
+            <li><a href="daramodarbusaraksts.html">SARAKSTS</a></li>
+        </ul>
+    </nav>
+</div> 
+
+<!-- Darāmo lietu ievade -->
+<input type="text" id="taskInput" placeholder="Ieraksti darāmo lietu...">
+<!-- Poga uzdevuma pievienošanai -->
+<button onclick="addTask()">Pievienot</button>
+
+<!-- Saraksts, kur tiks pievienoti uzdevumi -->
+<ul id="taskList"></ul>
+
+<!-- JavaScript funkcionalitāte -->
+<script>
+  // Funkcija, lai pievienotu jaunu uzdevumu
+  function addTask() {
+    const input = document.getElementById("taskInput"); // Iegūst ievades lauku
+    const taskText = input.value.trim(); // Apstrādā ievadīto tekstu
+
+    // Ja ievadīts tukšums, funkcija neturpina
+    if (taskText === "") return;
+
+    const li = document.createElement("li"); // Izveido jaunu saraksta elementu <li>
+
+    const span = document.createElement("span"); // Izveido tekstu uzdevumam
+    span.textContent = taskText;
+
+    // Kad uzspiež uz tekstu, tas tiek pārslēgts uz "pabeigts"
+    span.onclick = function () {
+      li.classList.toggle("completed"); // Pārslēdz CSS klasi (var izmantot stilam)
+    };
+
+    const deleteBtn = document.createElement("button"); // Izveido "Dzēst" pogu
+    deleteBtn.textContent = "Dzēst";
+
+    // Kad spiež "Dzēst", uzdevums tiek izņemts
+    deleteBtn.onclick = function () {
+      li.remove();
+    };
+
+    // Pievieno tekstu un pogu uz <li>
+    li.appendChild(span);
+    li.appendChild(deleteBtn);
+
+    // Pievieno <li> pie saraksta
+    document.getElementById("taskList").appendChild(li);
+
+    // Notīra ievades lauku
+    input.value = "";
+  }
+</script>
+</body>
+</html>
